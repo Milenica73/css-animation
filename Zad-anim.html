@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<title>Animacija-z</title>
+
+<style>
+
+.box {
+
+margin-bottom: 100px;
+margin-right: 100px;
+width: 440px;
+height: 370px;
+border: 1px solid #000;
+background-color: #050210;
+padding: 10px 10px 10px 100px;
+position: absolute;
+}
+
+.box1 {
+
+background-color: (#914E67, #D65F4F, #5D7586);
+
+border-radius: 100%;
+height: 300px;
+width: 300px;
+position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+
+
+/* linear-repeating-gradient: (transparent -80% #fb5dad #55fb9f #b97aff); */
+
+background: linear-gradient(#fb5dad, #55fb9f, #b97aff);
+
+box-shadow: 0px 0px 50px -2px (#fb5dad, #55fb9f, #b97aff);
+
+}
+
+.box1 {
+
+   
+    /* box-shadow: 6px 6px 6px 6px; */
+    /*box-shadow: inset 0 0 14px #2d111b;*/
+}
+
+.box1::before {
+    /* filter: blur(1px); */
+}
+
+
+/* div.box1 {
+transition: rotate 10s;
+transition-timing-function: ease;
+} */
+
+
+.box1 {
+    /* box-shadow: 0px 0px 46px -4px red; */
+}
+
+
+/* animation-name: my-animation;
+animation-duration: 10s;
+animation-iteration-count: infinite; */
+}
+
+.box2::after {
+width: 100px;
+height: 100px;
+background-color: #050210;
+border: 10px solid;
+
+}
+
+.box2::after{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 0px;
+    height: 0px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    border-radius: 100%;
+    animation-delay: .5;
+    animation-name: pulses;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.box2{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 0px;
+    height: 0px;
+    background-color: rgb(215, 181, 181);
+    top: 50%;
+    left: 50%;
+    opacity: 0.7;
+    border-radius: 100%;
+    -webkit-animation-name: pulses;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+}
+
+@keyframes pulses{
+    0% { width:0;height: 0; opacity: 0.0}
+    10% { width:10%;height: 10%; opacity: .20}
+    20% { width:20%;height: 20%; opacity: .40 }
+    30% { width:30%;height: 30%; opacity: .60 }
+    40% { width:40%;height: 40%; opacity: .80 } 
+    50% { width:50%;height: 50%; opacity: 1.0}
+    60% { width:60%;height: 60%; opacity: .80}
+    70% { width:70%;height: 70%;  opacity: .60}
+    80% { width:80%;height: 80%;  opacity: .40}
+    90% { width:90%;height: 90%;  opacity: .20}
+    100% { width:100%;height: 100%;  opacity: 0.0}
+}
+
+.inner-box{
+    width: 85%;
+    height: 85%;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    background-color: black;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+@keyframes my-animation {
+0% {
+transform: translateX(0px) rotate3d(0deg);
+width: 300px;
+height: 300px;
+}
+
+33% {
+transform: translateX(0px) rotate(360deg);
+width: 300px;
+height: 300px;
+}
+
+66% {
+transform: translate(0px) rotate3d(180deg);
+width: 300px;
+height: 300px;
+}
+
+100% {
+transform: translateX(0px) rotate(200deg);
+width: 300px;
+height: 300px;
+}
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<div class="box1">
+    <div class="inner-box">
+        <div class="box2"></div>
+    </div>
+</div>
+
+</div>
+
+</body>
+</html>
